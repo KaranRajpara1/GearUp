@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="Background">#CD2B2B</color>
     <color name="textedit">#E78484</color>
+    <color name="recover">#FDE3E3</color>
 </resources>

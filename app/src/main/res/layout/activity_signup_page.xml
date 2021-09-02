@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".signup_page"
+    android:background="@drawable/gradient">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="137dp"
+        app:srcCompat="@drawable/quizzer_icon"
+        android:contentDescription="TODO" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="356dp"
+        android:layout_height="602dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="135dp"
+        android:layout_marginRight="30dp"
+        app:cardCornerRadius="35dp"
+        >
+        <ImageButton
+            android:layout_width="225dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/signup" />
+        <ImageButton
+            android:id="@+id/student"
+            android:layout_width="77dp"
+            android:layout_height="103dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/student_image"
+            android:layoutDirection="inherit" />
+
+        <ImageButton
+            android:id="@+id/Teacher"
+            android:layout_width="77dp"
+            android:layout_height="103dp"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/teacher_image"
+            android:layoutDirection="inherit" />
+
+        <ImageButton
+            android:id="@+id/Parent"
+            android:layout_width="77dp"
+            android:layout_height="103dp"
+            android:layout_marginLeft ="235dp"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/parent_image"
+            android:layoutDirection="inherit" />
+
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="230dp"
+            android:hint="Enter User Id"
+            android:textColorHint="@color/textedit"
+            android:textColor="@color/textedit"
+            android:textStyle="bold"/>
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/user_icon"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="240dp"
+            />
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="280dp"
+            android:hint="Enter Cell Phone No."
+            android:textColorHint="@color/textedit"
+            android:textColor="@color/textedit"
+            android:textStyle="bold"/>
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/phone_icon"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="290dp"
+            />
+        <EditText
+        android:layout_width="250dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="325dp"
+        android:hint="Enter Email address"
+        android:textColorHint="@color/textedit"
+        android:textColor="@color/textedit"
+        android:textStyle="bold"/>
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/email_icon"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="335dp"
+            />
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="370dp"
+            android:hint="Enter Password"
+            android:textColorHint="@color/textedit"
+            android:textColor="@color/textedit"
+            android:textStyle="bold"/>
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/password_icon"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="380dp"
+            />
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="415dp"
+            android:hint="Confirm Password"
+            android:textColorHint="@color/textedit"
+            android:textColor="@color/textedit"
+            android:textStyle="bold"/>
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/confirm_pass_icon"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="425dp"
+            />
+        <ImageButton
+            android:layout_width="124dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="116dp"
+            android:layout_marginTop="495dp"
+            android:background="@drawable/signup_button" />
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

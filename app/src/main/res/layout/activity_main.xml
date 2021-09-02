@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/gradient"
+
+    >
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="137dp"
+        app:srcCompat="@drawable/quizzer_icon"
+        android:contentDescription="TODO" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="356dp"
+        android:layout_height="602dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="135dp"
+        android:layout_marginRight="30dp"
+        app:cardCornerRadius="35dp"
+        >
+
+        <ImageButton
+            android:layout_width="225dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/signup_toggle" />
+
+        <ImageButton
+            android:layout_width="123dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/login_toggle" />
+
+
+        <ImageButton
+            android:id="@+id/student"
+            android:layout_width="77dp"
+            android:layout_height="103dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/student_image"
+            android:layoutDirection="inherit" />
+
+        <ImageButton
+            android:id="@+id/Teacher"
+            android:layout_width="77dp"
+            android:layout_height="103dp"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/teacher_image"
+            android:layoutDirection="inherit" />
+
+        <ImageButton
+            android:id="@+id/Parent"
+            android:layout_width="77dp"
+            android:layout_height="103dp"
+            android:layout_marginLeft ="235dp"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/parent_image"
+            android:layoutDirection="inherit" />
+
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="253dp"
+            android:hint="Enter User Id"
+            android:textColorHint="@color/textedit"
+            android:textColor="@color/textedit"
+            android:textStyle="bold"/>
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/user_icon"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="260dp"
+            />
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="350dp"
+            android:hint="Enter Password"
+            android:textColorHint="@color/textedit"
+            android:textColor="@color/textedit"
+            android:textStyle="italic"
+            android:inputType="textPassword"
+            />
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/password_icon"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="355dp"
+            />
+        <ImageButton
+            android:id="@+id/showPassword"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="275dp"
+            android:layout_marginTop="353dp"
+            android:background="@drawable/show_password"
+            android:layoutDirection="inherit" />
+        <ImageButton
+            android:layout_width="124dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="116dp"
+            android:layout_marginTop="475dp"
+            android:background="@drawable/login_button" />
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

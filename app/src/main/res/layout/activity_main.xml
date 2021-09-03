@@ -20,7 +20,7 @@
         android:layout_width="356dp"
         android:layout_height="602dp"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="135dp"
+        android:layout_marginTop="145dp"
         android:layout_marginRight="30dp"
         app:cardCornerRadius="35dp"
         >
@@ -76,7 +76,9 @@
             android:hint="Enter User Id"
             android:textColorHint="@color/textedit"
             android:textColor="@color/textedit"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:inputType="text"
+            android:textSize="20dp"/>
         <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"
@@ -92,7 +94,8 @@
             android:hint="Enter Password"
             android:textColorHint="@color/textedit"
             android:textColor="@color/textedit"
-            android:textStyle="italic"
+            android:textStyle="bold"
+            android:textSize="20dp"
             android:inputType="textPassword"
             />
         <ImageView
@@ -111,16 +114,16 @@
             android:background="@drawable/show_password"
             android:layoutDirection="inherit" />
         <ImageButton
-            android:layout_width="124dp"
-            android:layout_height="45dp"
-            android:layout_marginLeft="116dp"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="105dp"
             android:layout_marginTop="475dp"
             android:background="@drawable/login_button" />
         <TextView
             android:id="@+id/forgot_password_textView"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
-            android:layout_marginLeft="120dp"
+            android:layout_marginLeft="125dp"
             android:layout_marginTop="525dp"
             android:text="@string/forgot_password"
             android:textColor="@color/textedit"

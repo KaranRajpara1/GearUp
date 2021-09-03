@@ -11,6 +11,7 @@
         android:layout_height="350dp"
         android:layout_alignParentStart="true"
         android:src="@drawable/recovery" />
+
     <EditText
         android:layout_width="50dp"
         android:layout_height="50dp"

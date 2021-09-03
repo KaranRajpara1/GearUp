@@ -14,6 +14,14 @@ class signup_page : AppCompatActivity() {
         loginButton.setOnClickListener(){
             val myIntent = Intent(this, MainActivity::class.java)
             startActivity(myIntent)
+            overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right)
     }
+    }
+
+    override fun finish() {
+//        this method is for back button
+//                whenever we are on signup page and we press back button this transition will be applied
+        super.finish()
+        overridePendingTransition(R.anim.slide_in_left,R.anim.slide_out_right)
     }
 }

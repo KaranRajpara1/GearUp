@@ -26,6 +26,9 @@ class MainActivity : AppCompatActivity() {
         signUpButton.setOnClickListener(){
             val myIntent = Intent(this, signup_page::class.java)
             startActivity(myIntent)
+//            added animation
+//                    ref link : https://www.youtube.com/watch?v=0s6x3Sn4eYo
+            overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left)
         }
 
         setupActivityLink()

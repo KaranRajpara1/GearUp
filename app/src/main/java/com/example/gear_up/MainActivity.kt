@@ -1,6 +1,7 @@
 package com.example.gear_up
 
 import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Spannable
@@ -16,43 +17,28 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-//        val forgotPasswordTextView = findViewById<TextView>(R.id.forgot_password)
-//        forgotPasswordTextView.setOnClickListener {
-//            val myIntent = Intent(this, forgot_password::class.java)
-//            startActivity(myIntent)
-////            forgot_password.movementMethod = LinkMovementMethod.getInstance();
-//        }
+
         val signUpButton = findViewById<ImageButton>(R.id.btn_signUp)
+        val forgotPasswordTextView = findViewById<TextView>(R.id.forgot_password_textView)
+
+        forgotPasswordTextView.paintFlags = forgotPasswordTextView.paintFlags
 
         signUpButton.setOnClickListener(){
             val myIntent = Intent(this, signup_page::class.java)
             startActivity(myIntent)
         }
-//        forgotPasswordTextView.setOnClickListener {
-//            val myIntent = Intent(this, forgot_password::class.java)
-//            startActivity(myIntent)
-//        }
 
-//        textSpan()
-
+        setupActivityLink()
     }
-//    private fun textSpan()
-//    {
-//        val spannableString = SpannableString("Forgot Password ?")
-//        val forgotPasswordTextView = findViewById<TextView>(R.id.forgot_password)
-//        val clickableSpan = object : ClickableSpan(){
-//            override fun onClick(widget: View) {
-//                val myIntent = Intent(this@MainActivity, forgot_password::class.java)
-//                startActivity(myIntent)
-//            }
-//
-//            override fun updateDrawState(ds: TextPaint) {
-//                super.updateDrawState(ds)
-//
-//            }
-//        }
-//        spannableString.setSpan(clickableSpan,0,17,Spannable.SPAN_INCLUSIVE_EXCLUSIVE)
-//        forgotPasswordTextView.text = spannableString
-//        forgotPasswordTextView.movementMethod = LinkMovementMethod.getInstance()
-//    }
+
+//    ref link for text clickable
+//    https://learntodroid.com/how-to-create-a-hyperlink-using-android-textview/
+    fun setupActivityLink() {
+        val forgotPasswordTextView = findViewById<TextView>(R.id.forgot_password_textView)
+        forgotPasswordTextView.setTextColor(Color.RED)
+        forgotPasswordTextView.setOnClickListener {
+            val myIntent = Intent(this, forgot_password::class.java)
+            startActivity(myIntent)
+        }
+    }
 }

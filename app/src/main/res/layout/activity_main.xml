@@ -118,11 +118,11 @@
             android:background="@drawable/login_button" />
         <TextView
             android:id="@+id/forgot_password_textView"
-            android:layout_width="124dp"
+            android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_marginLeft="120dp"
             android:layout_marginTop="525dp"
-            android:text="Forgot Password ?"
+            android:text="@string/forgot_password"
             android:textColor="@color/textedit"
             android:textStyle="italic"
             android:clickable="true"

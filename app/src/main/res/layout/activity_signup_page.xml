@@ -61,17 +61,18 @@
             android:layout_width="250dp"
             android:layout_height="45dp"
             android:layout_marginLeft="50dp"
-            android:layout_marginTop="230dp"
+            android:layout_marginTop="233dp"
             android:hint="Enter User Id"
             android:textColorHint="@color/textedit"
             android:textColor="@color/textedit"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:inputType="text"/>
         <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:src="@drawable/user_icon"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="240dp"
+            android:layout_marginTop="245dp"
             />
         <EditText
             android:layout_width="250dp"
@@ -81,7 +82,8 @@
             android:hint="Enter Cell Phone No."
             android:textColorHint="@color/textedit"
             android:textColor="@color/textedit"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:inputType="phone"/>
         <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"
@@ -90,14 +92,16 @@
             android:layout_marginTop="290dp"
             />
         <EditText
-        android:layout_width="250dp"
-        android:layout_height="45dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="325dp"
-        android:hint="Enter Email address"
-        android:textColorHint="@color/textedit"
-        android:textColor="@color/textedit"
-        android:textStyle="bold"/>
+            android:layout_width="250dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="325dp"
+            android:hint="Enter Email address"
+            android:textColorHint="@color/textedit"
+            android:textColor="@color/textedit"
+            android:inputType="textEmailAddress"
+            android:textStyle="bold"
+            />
         <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"
@@ -113,7 +117,14 @@
             android:hint="Enter Password"
             android:textColorHint="@color/textedit"
             android:textColor="@color/textedit"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:inputType="textPassword"/>
+        <ImageButton
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/show_password"
+            android:layout_marginLeft="270dp"
+            android:layout_marginTop="380dp"/>
         <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"
@@ -129,7 +140,8 @@
             android:hint="Confirm Password"
             android:textColorHint="@color/textedit"
             android:textColor="@color/textedit"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:inputType="textPassword"/>
         <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"
@@ -138,9 +150,15 @@
             android:layout_marginTop="425dp"
             />
         <ImageButton
-            android:layout_width="124dp"
-            android:layout_height="45dp"
-            android:layout_marginLeft="116dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/show_password"
+            android:layout_marginLeft="270dp"
+            android:layout_marginTop="425dp"/>
+        <ImageButton
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="100dp"
             android:layout_marginTop="495dp"
             android:background="@drawable/signup_button" />
 

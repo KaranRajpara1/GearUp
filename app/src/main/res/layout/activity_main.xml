@@ -26,6 +26,7 @@
         >
 
         <ImageButton
+            android:id="@+id/btn_signUp"
             android:layout_width="225dp"
             android:layout_height="40dp"
             android:layout_marginLeft="60dp"
@@ -116,7 +117,7 @@
             android:layout_marginTop="475dp"
             android:background="@drawable/login_button" />
         <TextView
-            android:id="@+id/forgot_password"
+            android:id="@+id/forgot_password_textView"
             android:layout_width="124dp"
             android:layout_height="30dp"
             android:layout_marginLeft="120dp"

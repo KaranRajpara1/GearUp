@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
 
         val signUpButton = findViewById<ImageButton>(R.id.btn_signUp)
         val forgotPasswordTextView = findViewById<TextView>(R.id.forgot_password_textView)
-
+        val loginButton = findViewById<ImageButton>(R.id.btn_login)
         forgotPasswordTextView.paintFlags = forgotPasswordTextView.paintFlags
 
         signUpButton.setOnClickListener(){
@@ -29,6 +29,11 @@ class MainActivity : AppCompatActivity() {
 //            added animation
 //                    ref link : https://www.youtube.com/watch?v=0s6x3Sn4eYo
             overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left)
+        }
+
+        loginButton.setOnClickListener(){
+            val myIntent = Intent(this, activity_student::class.java)
+            startActivity(myIntent)
         }
 
         setupActivityLink()

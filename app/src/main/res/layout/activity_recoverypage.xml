@@ -84,6 +84,7 @@
         android:layout_marginTop="522dp"
         android:src="@drawable/recover_icon"/>
     <ImageButton
+        android:id="@+id/next"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_alignParentRight="true"

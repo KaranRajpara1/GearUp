@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+<!--    ref link: https://www.youtube.com/watch?v=v8MbOjBCu0o-->
+    <item
+        android:id="@+id/ic_dashboard"
+        android:icon="@drawable/dashboard_outlined"
+        android:title="Dashboard" />
+
+    <item
+        android:id="@+id/ic_invitation"
+        android:icon="@drawable/invitation_outlined"
+        android:title="Invitation" />
+    <item
+        android:id="@+id/ic_notification"
+        android:icon="@drawable/notification_outlined"
+        android:title="Notifications" />
+    <item
+        android:id="@+id/ic_mynotes"
+        android:icon="@drawable/mynotes_outlined"
+        android:title="My Notes" />
+</menu>

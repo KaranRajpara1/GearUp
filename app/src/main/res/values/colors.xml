@@ -10,4 +10,5 @@
     <color name="Background">#CD2B2B</color>
     <color name="textedit">#E78484</color>
     <color name="recover">#FDE3E3</color>
+    <color name="email_and_phone_no.">#CE3131</color>
 </resources>

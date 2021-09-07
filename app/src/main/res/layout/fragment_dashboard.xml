@@ -19,9 +19,10 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintLeft_toRightOf="parent"
         />
+
     <ImageView
         android:layout_width="550dp"
         android:layout_height="160dp"
-        android:src="@drawable/student_dashboard"/>
+        android:src="@drawable/student_dashboard" />
 
 </RelativeLayout>

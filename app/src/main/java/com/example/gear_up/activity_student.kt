@@ -73,6 +73,7 @@ class activity_student : AppCompatActivity() {
         if(fragment != null){
             val transection = supportFragmentManager.beginTransaction()
             transection.replace(R.id.fragment_container, fragment)
+
             transection.commit()
         }
     }

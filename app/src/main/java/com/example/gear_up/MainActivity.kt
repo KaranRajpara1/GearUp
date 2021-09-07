@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
 //    https://learntodroid.com/how-to-create-a-hyperlink-using-android-textview/
     fun setupActivityLink() {
         val forgotPasswordTextView = findViewById<TextView>(R.id.forgot_password_textView)
-        forgotPasswordTextView.setTextColor(Color.RED)
+        forgotPasswordTextView.setTextColor(getResources().getColor(R.color.textedit))
         forgotPasswordTextView.setOnClickListener {
             val myIntent = Intent(this, forgot_password::class.java)
             startActivity(myIntent)

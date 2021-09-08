@@ -7,17 +7,28 @@
     tools:context=".fragments.DashboardFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:text="Dashboard"-->
+<!--        android:layout_marginTop="200dp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:textSize="36sp"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintLeft_toRightOf="parent"-->
+<!--        />-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Dashboard"
-        android:layout_marginTop="200dp"
-        android:textStyle="bold"
-        android:textSize="36sp"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
         />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

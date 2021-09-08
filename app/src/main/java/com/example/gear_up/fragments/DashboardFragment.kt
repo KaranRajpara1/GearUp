@@ -5,7 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.gear_up.R
+import com.example.gear_up.RecyclerAdapter
+import com.example.gear_up.databinding.FragmentDashboardBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -22,12 +26,49 @@ class DashboardFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    // for recyclerview
+    private var layoutManager: RecyclerView.LayoutManager? = null
+    private var adapter: RecyclerView.Adapter<RecyclerAdapter.ViewHolder>? = null
+
+    // for view binding
+    private lateinit var binding: FragmentDashboardBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        //val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
+        // we can't use findViewById() in fragments. Hence we are using view binding
+        //val recyclerView = binding.recyclerView
+
         super.onCreate(savedInstanceState)
+
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
+
+
+        // for recyclerview
+        //layoutManager = LinearLayoutManager(context)
+//        binding.recyclerView.layoutManager = LinearLayoutManager(context)
+//        binding.recyclerView. = layoutManager
+//        adapter = RecyclerAdapter()
+//        binding.recyclerView.adapter = adapter
+
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        // for recyclerview
+        //layoutManager = LinearLayoutManager(context)
+        binding.recyclerView.layoutManager = LinearLayoutManager(context)
+        //binding.recyclerView. = layoutManager
+        adapter = RecyclerAdapter()
+        binding.recyclerView.adapter = adapter
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        binding = FragmentDashboardBinding.bind(view)
+        super.onViewCreated(view, savedInstanceState)
     }
 
     override fun onCreateView(

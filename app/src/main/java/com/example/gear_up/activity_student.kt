@@ -18,10 +18,6 @@ class activity_student : AppCompatActivity() {
     private val myNotesFragment = MyNotesFragment()
     private val notificationFragment = NotificationFragment()
 
-    //private val bottomNavigation = findViewById<com.google.android.material.bottomnavigation.BottomNavigationView>(R.id.bottom_navigation)
-    //private val bottomNavigation = findViewById<BottomNavigationView>(R.id.bottom_navigation)
-
-    //BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

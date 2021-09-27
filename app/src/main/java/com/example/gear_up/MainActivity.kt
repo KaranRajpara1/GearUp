@@ -10,10 +10,17 @@ import android.text.TextPaint
 import android.text.method.LinkMovementMethod
 import android.text.style.ClickableSpan
 import android.view.View
+import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.TextView
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 class MainActivity : AppCompatActivity() {
+    // Firebase
+//    private lateinit var auth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -36,10 +43,39 @@ class MainActivity : AppCompatActivity() {
             startActivity(myIntent)
         }
 
+        // Initialize Firebase Auth
+//        auth = Firebase.auth
+
+        val userId = intent.getStringExtra("user_id")
+        val emailId = intent.getStringExtra("email_id")
+
+        //val txtUserid = findViewById<EditText>(R.id.login_userid)
+        //val txtpassword = findViewById<EditText>(R.id.login_password)
+
+        // setting text on text field
+        // txtUserid.text = "User ID :: $userId"
+        // txtpassword.text = "Email ID :: $emailId"
+
+        // for logout (ref link: https://www.youtube.com/watch?v=8I5gCLaS25w  see from 25:07)
+//        btn_logout.setOnClickListener { it:View!
+//                // Logout from app
+//            FirebaseAuth.getInstance().signOut()
+//            // and then give intetnt to main activity
+//            finish()
+//
+//        }
+
+
         setupActivityLink()
+
+
     }
 
-//    ref link for text clickable
+
+
+
+
+    //    ref link for text clickable
 //    https://learntodroid.com/how-to-create-a-hyperlink-using-android-textview/
     fun setupActivityLink() {
         val forgotPasswordTextView = findViewById<TextView>(R.id.forgot_password_textView)

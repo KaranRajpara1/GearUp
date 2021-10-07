@@ -12,9 +12,8 @@ import androidx.recyclerview.widget.RecyclerView
 
 class RecyclerAdapter: RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
 
-    private var titles = arrayOf("Chapter 1","Chapter 2","Chapter 3","Chapter 4","Chapter 5","Chapter 6","Chapter 7","Chapter 8")
-    private var details = arrayOf("Introduction to DBMS","Relational DBMS","Database Design","Chapter 4 details",
-        "Chapter 5 details","Chapter 6 details","Chapter 7 details","Chapter 8 details")
+    private var titles = arrayOf("HCD","IWT","DBMS","CN","OT","LA","ISBCP","CA")
+    private var details = arrayOf("01CT0506","01CT0504","01CT0502","01CT0503", "01CT0501","01CT0509","01CT0505","01CT0510")
     private var images = arrayOf(R.drawable.androidimage,R.drawable.androidimage,R.drawable.androidimage,R.drawable.androidimage,
             R.drawable.androidimage,R.drawable.androidimage,R.drawable.androidimage,R.drawable.androidimage)
 

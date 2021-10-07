@@ -93,6 +93,8 @@ class signup_page : AppCompatActivity() {
                             })
                 }
             }
+
+
         }
 
 //        signUpBtn.setOnClickListener {

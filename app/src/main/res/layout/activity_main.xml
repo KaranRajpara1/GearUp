@@ -69,6 +69,7 @@
             android:layoutDirection="inherit" />
 
         <EditText
+            android:id="@+id/login_userid"
             android:layout_width="250dp"
             android:layout_height="45dp"
             android:layout_marginLeft="60dp"
@@ -87,6 +88,7 @@
             android:layout_marginTop="260dp"
             />
         <EditText
+            android:id="@+id/login_password"
             android:layout_width="250dp"
             android:layout_height="45dp"
             android:layout_marginLeft="60dp"
@@ -113,6 +115,12 @@
             android:layout_marginTop="353dp"
             android:background="@drawable/show_password"
             android:layoutDirection="inherit" />
+<!--        <ProgressBar-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:id="@+id/progressBar"-->
+<!--            />-->
+
         <ImageButton
             android:id="@+id/btn_login"
             android:layout_width="150dp"

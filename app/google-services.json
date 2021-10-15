@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "611471043795",
+    "project_id": "gearup-d7328",
+    "storage_bucket": "gearup-d7328.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:611471043795:android:18753a2c266cdb8d983826",
+        "android_client_info": {
+          "package_name": "com.example.gear_up"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "611471043795-cbl79gqtg2j5gn3dpeodchqcvmaefg1t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhqXcj0-MW1xSAvcTAtIAzZRjAih-mJsk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "611471043795-cbl79gqtg2j5gn3dpeodchqcvmaefg1t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

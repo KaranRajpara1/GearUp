@@ -15,10 +15,12 @@ import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
 class signup_page : AppCompatActivity() {
     //private lateinit var auth: FirebaseAuth
+    val TAG = "MyMessage"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup_page)
@@ -39,6 +41,8 @@ class signup_page : AppCompatActivity() {
         val signUpBtn = findViewById<ImageButton>(R.id.btn_signUp)
         val emailTxt = findViewById<EditText>(R.id.txt_email)
         val passwordTxt = findViewById<EditText>(R.id.txt_password)
+        val userid = findViewById<EditText>(R.id.signup_userid)
+        val phoneNo = findViewById<EditText>(R.id.signup_phoneno)
         signUpBtn.setOnClickListener {
             when{
                 TextUtils.isEmpty(emailTxt.text.toString().trim{ it <= ' ' }) -> {
@@ -67,7 +71,33 @@ class signup_page : AppCompatActivity() {
                             // if the registration is successfully done
                                 if(task.isSuccessful){
 
-                                    //  Firebase regiterwed user
+                                    // if task is successful then add student details to student collection in firestore
+                                    val db = Firebase.firestore
+                                    // Create a new student with a enrollment and phoneNo and email
+                                    val en = userid.text.toString()
+                                    val phone = phoneNo.text.toString()
+                                    val email = emailTxt.text.toString()
+                                    val user = hashMapOf(
+                                        "enrollment" to en,
+                                        "phoneNo" to phone,
+                                        "email" to email
+                                    )
+
+                                    // Add a new document with a generated ID
+                                    db.collection("student")
+                                        .add(user)
+                                        .addOnSuccessListener { documentReference ->
+                                            Log.d(TAG, "DocumentSnapshot added with ID: ${documentReference.id}")
+                                        }
+                                        .addOnFailureListener { e ->
+                                            Log.w(TAG, "Error adding document", e)
+                                        }
+
+
+
+
+
+                                    //  Firebase registered user
                                     val firebaseUser: FirebaseUser = task.result!!.user!!
 
                                     Toast.makeText(

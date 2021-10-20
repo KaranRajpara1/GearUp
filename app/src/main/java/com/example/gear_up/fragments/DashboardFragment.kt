@@ -105,7 +105,9 @@ class DashboardFragment : Fragment() {
 
     private fun EventChangeListerner() {
         db = FirebaseFirestore.getInstance()
-        db.collection("faculty").
+        // if we don't want to make it in ascending order then simply remove .orderBy()
+        // In the argument of orderBy() the field name should be pass amd it must be same as Firebase Field
+        db.collection("faculty").orderBy("C_Name",Query.Direction.ASCENDING).
                 addSnapshotListener(object : EventListener<QuerySnapshot>{
                     override fun onEvent(
                         value: QuerySnapshot?,

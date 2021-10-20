@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.gear_up.R
@@ -82,8 +83,21 @@ class DashboardFragment : Fragment() {
 
         binding.recyclerView.setHasFixedSize(true)
         subjectArraylist = arrayListOf()
-        myAdapter = Student_Subject_Adapter(subjectArraylist)
+        myAdapter = Student_Subject_Adapter(subjectArraylist) // 2nd paramter added in the process of intent to recyclerview
         binding.recyclerView.adapter = myAdapter
+
+        // for item click event in recyclerview
+        myAdapter.setOnItemClickListener(object : Student_Subject_Adapter.onItemClickListener{
+            override fun onItemClcik(positiion: Int) {
+                Toast.makeText(
+                    activity,
+                    "You clicked on item no: $positiion",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+
+        })
+
 
         EventChangeListerner() // for dynamic recyclerview
 

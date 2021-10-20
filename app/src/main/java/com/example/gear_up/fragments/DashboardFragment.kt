@@ -1,6 +1,7 @@
 package com.example.gear_up.fragments
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -9,7 +10,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.gear_up.R
 import com.example.gear_up.RecyclerAdapter
+import com.example.gear_up.Student_Subject
+import com.example.gear_up.Student_Subject_Adapter
 import com.example.gear_up.databinding.FragmentDashboardBinding
+import com.google.firebase.firestore.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -32,6 +36,15 @@ class DashboardFragment : Fragment() {
 
     // for view binding
     private lateinit var binding: FragmentDashboardBinding
+
+    // For firestore db
+    private lateinit var db : FirebaseFirestore
+
+    // for subject array list
+    private lateinit var subjectArraylist : ArrayList<Student_Subject>
+
+    // Myadapter
+    private lateinit var myAdapter: Student_Subject_Adapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -62,8 +75,47 @@ class DashboardFragment : Fragment() {
         //layoutManager = LinearLayoutManager(context)
         binding.recyclerView.layoutManager = LinearLayoutManager(context)
         //binding.recyclerView. = layoutManager
-        adapter = RecyclerAdapter()
-        binding.recyclerView.adapter = adapter
+
+        // Below 2 lines are for static items
+//        adapter = RecyclerAdapter()
+//        binding.recyclerView.adapter = adapter
+
+        binding.recyclerView.setHasFixedSize(true)
+        subjectArraylist = arrayListOf()
+        myAdapter = Student_Subject_Adapter(subjectArraylist)
+        binding.recyclerView.adapter = myAdapter
+
+        EventChangeListerner() // for dynamic recyclerview
+
+    }
+
+    private fun EventChangeListerner() {
+        db = FirebaseFirestore.getInstance()
+        db.collection("faculty").
+                addSnapshotListener(object : EventListener<QuerySnapshot>{
+                    override fun onEvent(
+                        value: QuerySnapshot?,
+                        error: FirebaseFirestoreException?
+                    ) {
+
+                        if(error != null){
+                            Log.e("Firestore Error",error.message.toString())
+                            return
+                        }
+                        // if no error then loop through all the documents
+                        for (dc: DocumentChange in value?.documentChanges!!){
+                            if(dc.type == DocumentChange.Type.ADDED){
+                                subjectArraylist.add(dc.document.toObject(Student_Subject:: class.java))
+                                // converted document data to the Student_Subject class
+                            }
+                        }
+
+                        // After we loop through all the document then
+                        myAdapter.notifyDataSetChanged()
+
+                    }
+
+                })
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

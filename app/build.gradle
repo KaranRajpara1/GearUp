@@ -52,6 +52,7 @@ dependencies {
 
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'com.google.firebase:firebase-auth:19.2.0'
+    implementation 'com.google.firebase:firebase-firestore:23.0.4'
     testImplementation 'junit:junit:4.+'
 
     // Import the BoM for the Firebase platform
@@ -69,4 +70,18 @@ dependencies {
     // Declare the dependency for the Firebase Authentication library
     // When using the BoM, you don't specify versions in Firebase library dependencies
     implementation 'com.google.firebase:firebase-auth-ktx'
+
+    // changes after migration of firebase console acc
+    // Import the Firebase BoM
+    implementation platform('com.google.firebase:firebase-bom:28.4.2')
+    // Add the dependency for the Firebase SDK for Google Analytics
+    // When using the BoM, don't specify versions in Firebase dependencies
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+
+
+    // for firebase cloud firestore
+    // Declare the dependency for the Cloud Firestore library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-firestore-ktx'
+
 }

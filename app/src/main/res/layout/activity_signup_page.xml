@@ -58,7 +58,7 @@
             android:layoutDirection="inherit" />
 
         <EditText
-
+            android:id="@+id/signup_userid"
             android:layout_width="250dp"
             android:layout_height="45dp"
             android:layout_marginLeft="50dp"
@@ -76,6 +76,7 @@
             android:layout_marginTop="245dp"
             />
         <EditText
+            android:id="@+id/signup_phoneno"
             android:layout_width="250dp"
             android:layout_height="45dp"
             android:layout_marginLeft="50dp"

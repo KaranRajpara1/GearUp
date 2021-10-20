@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.subject_homepage"
+    android:background="@drawable/gradient">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/Subjectname"
+        android:text="Subject name"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="45sp"
+        android:layout_marginTop="20dp"
+        android:padding="13dp"
+        />
+
+    <ImageButton
+        android:layout_width="319dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="40dp"
+        android:background="@drawable/revisebtn"
+
+        />
+
+    <ImageButton
+        android:layout_width="319dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="450dp"
+        android:layout_marginLeft="40dp"
+        android:background="@drawable/syllabusbtn"
+
+        />
+
+    <ImageButton
+        android:layout_width="319dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginLeft="40dp"
+        android:background="@drawable/viewbtn"
+
+        />
+
+    <ImageButton
+        android:layout_width="319dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="350dp"
+        android:layout_marginLeft="40dp"
+        android:background="@drawable/discussbtn"
+
+        />
+
+    <ImageButton
+        android:layout_width="319dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="550dp"
+        android:layout_marginLeft="40dp"
+        android:background="@drawable/analysisbtn"
+
+        />
+
+</FrameLayout>

@@ -68,6 +68,7 @@
             android:textColor="@color/textedit"
             android:textStyle="bold"
             android:inputType="text"/>
+
         <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"
@@ -75,12 +76,34 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="245dp"
             />
+
+        <EditText
+            android:id="@+id/signup_name"
+            android:layout_width="250dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="278dp"
+            android:hint="Enter User Name"
+            android:textColorHint="@color/textedit"
+            android:textColor="@color/textedit"
+            android:textStyle="bold"
+            android:inputType="text"/>
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/user_icon"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="290dp"
+            />
+
+
         <EditText
             android:id="@+id/signup_phoneno"
             android:layout_width="250dp"
             android:layout_height="45dp"
             android:layout_marginLeft="50dp"
-            android:layout_marginTop="280dp"
+            android:layout_marginTop="325dp"
             android:hint="Enter Cell Phone No."
             android:textColorHint="@color/textedit"
             android:textColor="@color/textedit"
@@ -91,14 +114,14 @@
             android:layout_height="24dp"
             android:src="@drawable/phone_icon"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="290dp"
+            android:layout_marginTop="335dp"
             />
         <EditText
             android:id="@+id/txt_email"
             android:layout_width="250dp"
             android:layout_height="45dp"
             android:layout_marginLeft="50dp"
-            android:layout_marginTop="325dp"
+            android:layout_marginTop="370dp"
             android:hint="Enter Email address"
             android:textColorHint="@color/textedit"
             android:textColor="@color/textedit"
@@ -110,14 +133,14 @@
             android:layout_height="24dp"
             android:src="@drawable/email_icon"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="335dp"
+            android:layout_marginTop="380dp"
             />
         <EditText
             android:id="@+id/txt_password"
             android:layout_width="250dp"
             android:layout_height="45dp"
             android:layout_marginLeft="50dp"
-            android:layout_marginTop="370dp"
+            android:layout_marginTop="415dp"
             android:hint="Enter Password"
             android:textColorHint="@color/textedit"
             android:textColor="@color/textedit"
@@ -128,19 +151,19 @@
             android:layout_height="24dp"
             android:background="@drawable/show_password"
             android:layout_marginLeft="270dp"
-            android:layout_marginTop="380dp"/>
+            android:layout_marginTop="425dp"/>
         <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:src="@drawable/password_icon"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="380dp"
+            android:layout_marginTop="425dp"
             />
         <EditText
             android:layout_width="250dp"
             android:layout_height="45dp"
             android:layout_marginLeft="50dp"
-            android:layout_marginTop="415dp"
+            android:layout_marginTop="460dp"
             android:hint="Confirm Password"
             android:textColorHint="@color/textedit"
             android:textColor="@color/textedit"
@@ -151,20 +174,20 @@
             android:layout_height="24dp"
             android:src="@drawable/confirm_pass_icon"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="425dp"
+            android:layout_marginTop="470dp"
             />
         <ImageButton
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:background="@drawable/show_password"
             android:layout_marginLeft="270dp"
-            android:layout_marginTop="425dp"/>
+            android:layout_marginTop="470dp"/>
         <ImageButton
             android:id="@+id/btn_signUp"
             android:layout_width="150dp"
             android:layout_height="40dp"
             android:layout_marginLeft="100dp"
-            android:layout_marginTop="495dp"
+            android:layout_marginTop="540dp"
             android:background="@drawable/signup_button" />
 
     </androidx.cardview.widget.CardView>

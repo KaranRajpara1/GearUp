@@ -43,6 +43,7 @@ class signup_page : AppCompatActivity() {
         val passwordTxt = findViewById<EditText>(R.id.txt_password)
         val userid = findViewById<EditText>(R.id.signup_userid)
         val phoneNo = findViewById<EditText>(R.id.signup_phoneno)
+        val name = findViewById<EditText>(R.id.signup_name)
         signUpBtn.setOnClickListener {
             when{
                 TextUtils.isEmpty(emailTxt.text.toString().trim{ it <= ' ' }) -> {
@@ -77,10 +78,12 @@ class signup_page : AppCompatActivity() {
                                     val en = userid.text.toString()
                                     val phone = phoneNo.text.toString()
                                     val email = emailTxt.text.toString()
+                                    val userName = name.text.toString()
                                     val user = hashMapOf(
                                         "enrollment" to en,
                                         "phoneNo" to phone,
-                                        "email" to email
+                                        "email" to email,
+                                        "name" to userName
                                     )
 
                                     // Add a new document with a generated ID
@@ -92,8 +95,6 @@ class signup_page : AppCompatActivity() {
                                         .addOnFailureListener { e ->
                                             Log.w(TAG, "Error adding document", e)
                                         }
-
-
 
 
 

@@ -39,6 +39,7 @@
         />
 
     <ImageButton
+        android:id="@+id/subjectHome_ViewQuiz"
         android:layout_width="319dp"
         android:layout_height="60dp"
         android:layout_marginTop="250dp"

@@ -22,8 +22,8 @@
             android:id="@+id/quizIcon"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/androidimage"
-            app:tint="@android:color/white" />
+            android:src="@drawable/androidimage"/>
+<!--            app:tint="@android:color/white" -->
 
 
         <TextView

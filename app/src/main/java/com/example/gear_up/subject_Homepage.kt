@@ -23,8 +23,9 @@ class subject_Homepage : AppCompatActivity() {
         val btn_viewQuiz = findViewById<ImageButton>(R.id.subjectHome_ViewQuiz)
         btn_viewQuiz.setOnClickListener(){
             val myIntent = Intent(this, ViewQuiz::class.java)
+            myIntent.putExtra("subjectName",subjectName)
             startActivity(myIntent)
-            finish()
+//            finish()
         }
     }
 }

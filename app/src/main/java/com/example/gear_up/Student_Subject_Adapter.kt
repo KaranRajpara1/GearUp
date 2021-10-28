@@ -35,7 +35,7 @@ class Student_Subject_Adapter(private val subjectList: ArrayList<Student_Subject
 
     override fun onBindViewHolder(holder: Student_Subject_Adapter.MyViewHolder, position: Int) {
         val subject : Student_Subject = subjectList[position]
-        holder.subjectTitle.text = subject.C_Name
+        holder.subjectTitle.text = subject.C_name
         holder.subjectCode.text = subject.C_Code
         // Here if any field value is ither than string, for example long then convert it into string
         // for example: if C_Code is long then holder.subjectCode.text = subject.C_Code.toString()

@@ -96,7 +96,7 @@ class DashboardFragment : Fragment() {
 //                    Toast.LENGTH_SHORT
 //                ).show()
                 val intent = Intent(activity,subject_Homepage::class.java)
-                intent.putExtra("subjectName",subjectArraylist[positiion].C_Name)
+                intent.putExtra("subjectName",subjectArraylist[positiion].C_name)
                 intent.putExtra("subjectCode",subjectArraylist[positiion].C_Code)
                 startActivity(intent)
             }
@@ -115,7 +115,7 @@ class DashboardFragment : Fragment() {
         db = FirebaseFirestore.getInstance()
         // if we don't want to make it in ascending order then simply remove .orderBy()
         // In the argument of orderBy() the field name should be pass amd it must be same as Firebase Field
-        db.collection("faculty").orderBy("C_Name",Query.Direction.ASCENDING).
+        db.collection("courses").orderBy("C_name",Query.Direction.ASCENDING).
                 addSnapshotListener(object : EventListener<QuerySnapshot>{
                     override fun onEvent(
                         value: QuerySnapshot?,

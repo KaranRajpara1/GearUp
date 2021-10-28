@@ -9,11 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Gear_Up">
-<!--<<<<<<< HEAD-->
-        <activity android:name=".change_password"></activity>
-<!--=======-->
-        <activity android:name=".activity_student"></activity>
-<!--&gt;>>>>>> c7afed03796bdeea02e03a4c18c8db2453708af1-->
+        <activity android:name=".subject_Homepage"></activity>
+        <!-- <<<<<<< HEAD -->
+        <activity android:name=".change_password" /> <!-- ======= -->
+        <activity android:name=".activity_student" /> <!-- &gt;>>>>>> c7afed03796bdeea02e03a4c18c8db2453708af1 -->
         <!-- <<<<<<< HEAD -->
         <activity android:name=".forgot_password" /> <!-- ======== -->
         <activity android:name=".recoverypage" /> <!-- &gt;>>>>>> 63fbbe80e4454938cb1c4b280c10b094d2f6c939 -->

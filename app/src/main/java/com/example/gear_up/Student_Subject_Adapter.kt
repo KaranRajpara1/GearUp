@@ -11,7 +11,9 @@ import androidx.recyclerview.widget.RecyclerView
 // Ref link for fetching data from firestore and put it into recyclerview: https://youtu.be/Ly0xwWlUpVM
 // Related files : Student_Subject.kt
 
-// Ref link for Item Click Listener - RecyclerView : https://youtu.be/dB9JOsVx-yY
+// Ref link for Item Click Listener
+// Part 1 - RecyclerView : https://youtu.be/dB9JOsVx-yY
+// Part 2 - https://www.youtube.com/watch?v=EoJX7h7lGxM
 
 class Student_Subject_Adapter(private val subjectList: ArrayList<Student_Subject>): RecyclerView.Adapter<Student_Subject_Adapter.MyViewHolder>() {
 

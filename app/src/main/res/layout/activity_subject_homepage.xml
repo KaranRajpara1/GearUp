@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.subject_homepage"
+    tools:context=".subject_Homepage"
     android:background="@drawable/gradient">
-
-    <!-- TODO: Update blank fragment layout -->
 
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/Subjectname"
+        android:id="@+id/subjectHome_Subjectname"
         android:text="Subject name"
         android:textColor="@color/white"
         android:textStyle="bold"
@@ -65,5 +64,4 @@
         android:background="@drawable/analysisbtn"
 
         />
-
-</FrameLayout>
+</RelativeLayout>

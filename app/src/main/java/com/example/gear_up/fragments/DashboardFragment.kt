@@ -1,5 +1,6 @@
 package com.example.gear_up.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -7,12 +8,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.gear_up.*
 import com.example.gear_up.R
-import com.example.gear_up.RecyclerAdapter
-import com.example.gear_up.Student_Subject
-import com.example.gear_up.Student_Subject_Adapter
 import com.example.gear_up.databinding.FragmentDashboardBinding
 import com.google.firebase.firestore.*
 
@@ -89,14 +89,22 @@ class DashboardFragment : Fragment() {
         // for item click event in recyclerview
         myAdapter.setOnItemClickListener(object : Student_Subject_Adapter.onItemClickListener{
             override fun onItemClcik(positiion: Int) {
-                Toast.makeText(
-                    activity,
-                    "You clicked on item no: $positiion",
-                    Toast.LENGTH_SHORT
-                ).show()
+                // toast to find position of item in recyclerview
+//                Toast.makeText(
+//                    activity,
+//                    "You clicked on item no: $positiion",
+//                    Toast.LENGTH_SHORT
+//                ).show()
+                val intent = Intent(activity,subject_Homepage::class.java)
+                intent.putExtra("subjectName",subjectArraylist[positiion].C_Name)
+                intent.putExtra("subjectCode",subjectArraylist[positiion].C_Code)
+                startActivity(intent)
             }
 
         })
+
+
+
 
 
         EventChangeListerner() // for dynamic recyclerview
@@ -166,4 +174,5 @@ class DashboardFragment : Fragment() {
                 }
             }
     }
+
 }

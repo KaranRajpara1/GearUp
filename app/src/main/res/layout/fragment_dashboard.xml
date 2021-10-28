@@ -25,7 +25,7 @@
     <ImageView
         android:id="@+id/dashboard_title"
         android:layout_width="match_parent"
-        android:layout_height="160dp"
+        android:layout_height="161dp"
         android:layout_marginBottom="-16dp"
         android:src="@drawable/student_dashboard"
         app:layout_constraintBottom_toTopOf="@+id/recyclerView"

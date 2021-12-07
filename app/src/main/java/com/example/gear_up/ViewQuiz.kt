@@ -7,13 +7,13 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-//import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.toObjects
 
 class ViewQuiz : AppCompatActivity() {
     lateinit var adapter: QuizAdapter
     private var quizList = mutableListOf<Quiz>()
-    //lateinit var firestore: FirebaseFirestore
+    lateinit var firestore: FirebaseFirestore
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,27 +22,36 @@ class ViewQuiz : AppCompatActivity() {
 
 
 
-        //setUpFireStore()
+        setUpFireStore()
         populateDummyData()
         setUpRecyclerView()
 
     }
 
-//    private fun setUpFireStore() {
-//        val bundle: Bundle?= intent.extras
-//        val subjectName = bundle!!.getString("subjectName")
-//        firestore = FirebaseFirestore.getInstance()
-//        Log.d("Subject name",subjectName.toString())
-//        val collectionRefernece = firestore.collection(subjectName.toString())
-//        collectionRefernece.addSnapshotListener{  value,error ->
-//            if(value == null || error != null)
-//            {
-//                Toast.makeText(this,"Error Fetching Data",Toast.LENGTH_SHORT).show()
-//                return@addSnapshotListener
-//            }
-//            Log.d("Data",value.toObjects(Quiz::class.java).toString())
-//        }
-//    }
+    private fun setUpFireStore() {
+        val bundle: Bundle?= intent.extras
+        val subjectName = bundle!!.getString("subjectName")
+        firestore = FirebaseFirestore.getInstance()
+        Log.d("Subject name",subjectName.toString())
+        val collectionRefernece = firestore.collection(subjectName.toString())
+        Log.d("Collection refernece",collectionRefernece.toString())
+        collectionRefernece.addSnapshotListener{  value,error ->
+            if(value == null )
+            {
+                Toast.makeText(this,"NULL data",Toast.LENGTH_SHORT).show()
+                return@addSnapshotListener
+            }
+            else if(error != null)
+            {
+                Toast.makeText(this,"Error Fetching Data",Toast.LENGTH_SHORT).show()
+                return@addSnapshotListener
+            }
+            Log.d("Data",value.toObjects(Quiz::class.java).toString())
+            quizList.clear()
+            quizList.addAll(value.toObjects(Quiz::class.java))
+            adapter.notifyDataSetChanged() // to tell adapter that data has been changed so do the refresh
+        }
+    }
 
     private fun populateDummyData() {
         quizList.add(Quiz("12-10-2021","12-10-2021"))

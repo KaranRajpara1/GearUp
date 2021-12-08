@@ -16,5 +16,6 @@ var optionA: String = "",
 var optionB: String = "",
 var optionC: String = "",
 var optionD: String = "",
-var correct_ans: String = ""
+var correct_ans: String = "",
+var userAnswer: String = ""
 )

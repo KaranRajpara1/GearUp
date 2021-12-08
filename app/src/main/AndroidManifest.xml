@@ -9,7 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Gear_Up">
-        <activity android:name=".QuestionActivity"></activity>
+        <activity android:name=".QuestionActivity" android:theme="@style/AppTheme">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity>
         <activity android:name=".ViewQuiz" />
         <activity android:name=".subject_Homepage" /> <!-- <<<<<<< HEAD -->
         <activity android:name=".change_password" /> <!-- ======= -->

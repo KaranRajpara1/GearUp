@@ -12,7 +12,8 @@ import com.google.firebase.firestore.ktx.toObjects
 
 class ViewQuiz : AppCompatActivity() {
     lateinit var adapter: QuizAdapter
-    private var quizList = mutableListOf<Quiz>()
+//    private var quizList = mutableListOf<Quiz>()
+    private var quizList: MutableList<Quiz> = mutableListOf<Quiz>()
     lateinit var firestore: FirebaseFirestore
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -47,8 +48,22 @@ class ViewQuiz : AppCompatActivity() {
                 return@addSnapshotListener
             }
             Log.d("Data",value.toObjects(Quiz::class.java).toString())
+//            for (prop in Quiz::class.java) {
+//                println("${prop.name} = ${prop.get(user)}")
+//            }
+            (value.toObjects(Quiz::class.java)).forEach {
+                Log.d("Item ",it.toString())
+                Log.d("title ","${it.title}")
+//                var singleQuiz: MutableList<MutableMap<String, String>> = mutableListOf(mutableMapOf())
+//                singleQuiz = it
+                if(it.title != ""){
+                    Log.d("Quiz","${it}")
+//                    quizList.toMutableList().add(it)
+                    quizList.add(it)
+                }
+            }
             quizList.clear()
-            quizList.addAll(value.toObjects(Quiz::class.java))
+            //quizList.addAll(value.toObjects(Quiz::class.java))
             adapter.notifyDataSetChanged() // to tell adapter that data has been changed so do the refresh
         }
     }

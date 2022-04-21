@@ -10,6 +10,7 @@ import android.text.TextPaint
 import android.text.TextUtils
 import android.text.method.LinkMovementMethod
 import android.text.style.ClickableSpan
+import android.util.Log
 import android.view.View
 import android.widget.EditText
 import android.widget.ImageButton
@@ -19,6 +20,7 @@ import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
 class MainActivity : AppCompatActivity() {
@@ -80,6 +82,24 @@ class MainActivity : AppCompatActivity() {
                                         "You are logged in successfully.",
                                         Toast.LENGTH_SHORT
                                     ).show()
+
+//                                    // testing (reading data from firestore)
+//                                    val db = Firebase.firestore
+//                                    val docRef = db.collection("SE2021").document("Demo_Quiz")
+//
+//                                    docRef.get()
+//                                        .addOnSuccessListener { document ->
+//                                            if (document != null) {
+//                                                Log.d("Karan", "DocumentSnapshot data: ${document.data}")
+//
+//                                            } else {
+//                                                Log.d("Karan", "No such document")
+//                                            }
+//                                        }
+//                                        .addOnFailureListener { exception ->
+//                                            Log.d("Karan", "get failed with ", exception)
+//                                        }
+
                                     val myIntent = Intent(this, activity_student::class.java)
                                     intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                                     intent.putExtra("user_id",FirebaseAuth.getInstance().currentUser!!.uid)
